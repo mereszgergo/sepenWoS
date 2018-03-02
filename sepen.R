@@ -11,8 +11,10 @@ dl <- 'c:/Users/meresz/Downloads'
 
 setwd(wd)
 
-out <- c('TS=(“health workforce”) AND (TS=(planning) OR TS=(forecasting) OR TS=(data) OR TS=(skills) OR TS=(methodology) OR TS=(demand) OR TS=(supply) OR TS=(doctors) OR TS=(dentists) OR TS=(pharmacists) OR TS=(midwives) OR TS=(nurses) OR TS=(allied health professions))', 
-         'TS=(“human resources for health”) AND (TS=(planning) OR TS=(forecasting) OR TS=(data) OR TS=(skills) OR TS=(methodology) OR TS=(demand) OR TS=(supply) OR TS=(doctors) OR TS=(dentists) OR TS=(pharmacists) OR TS=(midwives) OR TS=(nurses) OR TS=(allied health professions))')
+country_term <- " AND (CU=(ENGLAND) OR CU=(GERMANY) OR CU=(FRANCE) OR CU=(ITALY) OR CU=(SPAIN) OR CU=(NETHERLANDS) OR CU=(RUSSIA) OR CU=(SWITZERLAND) OR CU=(TURKEY) OR CU=(SWEDEN) OR CU=(POLAND) OR CU=(BELGIUM) OR CU=(DENMARK) OR CU=(SCOTLAND) OR CU=(AUSTRIA) OR CU=(PORTUGAL) OR CU=(CZECH REPUBLIC) OR CU=(GREECE) OR CU=(NORWAY) OR CU=(FINLAND) OR CU=(ROMANIA) OR CU=(IRELAND) OR CU=(HUNGARY) OR CU=(WALES) OR CU=(UKRAINE) OR CU=(SERBIA) OR CU=(SLOVAKIA) OR CU=(CROATIA) OR CU=(SLOVENIA) OR CU=(NORTH IRELAND) OR CU=(BULGARIA) OR CU=(LITHUANIA) OR CU=(ESTONIA) OR CU=(LATVIA) OR CU=(CYPRUS) OR CU=(BYELARUS) OR CU=(LUXEMBOURG) OR CU=(ICELAND) OR CU=(BOSNIA HERCEG) OR CU=(MALTA) OR CU=(MOLDOVA) OR CU=(ALBANIA) OR CU=(MONTENEGRO) OR CU=(REUNION) OR CU=(LIECHTENSTEIN) OR CU=(MONACO) OR CU=(GREENLAND) OR CU=(KOSOVO) OR CU=(VATICAN) OR CU=(UNITED KINGDOM) OR CU=(SAN MARINO) OR CU=(ANDORRA) OR CU=(GIBRALTAR) OR CU=(KOSOVA) OR CU=(SERBIA MONTENEG) OR CU=(CRIMEA) OR CU=(SVALBARD) OR CU=(SLOVAK) OR CU=(TURKS CAICOS) OR CU=(REPUBLIC KOSOVO) OR CU=(DEUTSCHLAND) OR CU=(U K) OR CU=(SOUTHE EUROPE) OR CU=(ROMAIA) OR CU=(REPUBLIC KOSOVA) OR CU=(REP MOLDOVA) OR CU=(MADRID) OR CU=(JERSEY) OR CU=(HERZEGOVINA) OR CU=(GERMAN) OR CU=(GEMANY) OR CU=(CATALONIA) OR CU=(BASQUE) OR CU=(ASTURIAS))"
+
+out <- c(paste0('TS=(“health workforce”) AND (TS=(planning) OR TS=(forecasting) OR TS=(data) OR TS=(skills) OR TS=(methodology) OR TS=(demand) OR TS=(supply) OR TS=(doctors) OR TS=(dentists) OR TS=(pharmacists) OR TS=(midwives) OR TS=(nurses) OR TS=(allied health professions))', country_term), 
+         paste0('TS=(“human resources for health”) AND (TS=(planning) OR TS=(forecasting) OR TS=(data) OR TS=(skills) OR TS=(methodology) OR TS=(demand) OR TS=(supply) OR TS=(doctors) OR TS=(dentists) OR TS=(pharmacists) OR TS=(midwives) OR TS=(nurses) OR TS=(allied health professions))', country_term))
 
 #################################
 ### Download citations module ###
